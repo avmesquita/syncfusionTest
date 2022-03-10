@@ -1,0 +1,37 @@
+<h1>
+    Hello Angular, Syncfusion Angular UI Button!
+  </h1>
+    
+  <button ejs-button cssClass="e-primary" (click)="btnClick($event)">Button</button>
+
+  <ejs-grid [dataSource]='data'>
+    <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+        <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+        <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column>
+    </e-columns>
+  </ejs-grid>  
+
+  <ejs-calendar></ejs-calendar>
+
+  <ejs-schedule> </ejs-schedule>
+
+  <button ejs-button [isPrimary]="true" (click)="btnClick($event)">Show Toast</button>
+  <ejs-toast #evento (created)="onCreate($event)">
+    <ng-template #title>
+      <div>Sample Toast Title</div>
+    </ng-template>
+    <ng-template #content>
+      <div>Sample Toast Content</div>
+    </ng-template>
+  </ejs-toast>
+
+  <ejs-datamatrixgenerator style="display: block;"  #barcode id="barcode" width="200px" height="200px" mode="SVG"
+                           type="DataMatrix" value="https://andremesquita.com">
+  </ejs-datamatrixgenerator>
+
+  <ejs-qrcodegenerator style="display: block;"  #barcode id="barcode" width="200px" foreColor="red" height="150px" mode="SVG" value="https://andremesquita.com"></ejs-qrcodegenerator>`
+
+  <ejs-filemanager id='default-filemanager' [ajaxSettings]='ajaxSettings'>
+  </ejs-filemanager>
